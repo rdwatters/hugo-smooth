@@ -1,0 +1,26 @@
+{{ partial "site_header.html" . }}
+<main class="detail m-scene" id="main">
+	<div class="m-detail-layout">
+				{{ partial "site_nav.html" . }}
+        <div class="m-right-panel m-page scene_element scene_element--fadeinup scene_element--fadeinright-wide">
+          <div class="right-panel_top m-highlight" style="background-image:url(/assets/images/{{.Params.image}});">
+            <div class="m-header">
+              <div class="m-breadcrumb" itemprop="breadcrumb">
+                <a class="breadcrumb_link" href="/">Home</a> →
+                <h1 class="m-type-display-1">
+                  {{.Title}}
+                </h1>
+              </div>
+              <p class="m-type-sub-heading-1">{{.Description}}</p>
+            </div>
+          </div>
+          <div class="m-segment">
+            <div class="segment_content">
+              {{.Content}}
+            </div>
+          </div>
+          {{ partial "content_footer.html" . }}
+        </div>
+      </div>
+</main>
+{{ partial "site_footer.html" . }}

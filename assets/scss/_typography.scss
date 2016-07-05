@@ -1,0 +1,98 @@
+html {
+    font-size: $base-font-size;
+}
+
+body {
+    font-size: 80%;
+    background-color: $body-bg-color;
+    font-family: $base-font-family;
+    color: $base-font-color;
+    font-weight: $base-font-weight;
+    line-height: 1.5;
+    @include MQ(M) {
+        font-size: 90%;
+    }
+    @include MQ(L) {
+        font-size: 100%;
+    }
+}
+
+code,
+pre {
+    font-family: 'courierprime', monoco, monospace, courrier;
+    font-weight: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    display: block;
+    font-family: $heading-font-family;
+    font-weight: $heading-font-weight;
+}
+
+h1 {
+    font-weight: $title-font-weight;
+    font-style: normal;
+}
+
+.segment_content {
+    blockquote {
+        position: relative;
+        display: block;
+        padding: 1em 0em .5em 1em;
+        margin-left: .25em;
+        border-left: 1px solid $brand;
+        font-size: 1.2em;
+        > p {
+            line-height: 1.1;
+            display: table-cell;
+            vertical-align: middle;
+            // letter-spacing: -0.09em;
+            // text-transform:uppercase;
+        }
+        .blockquote-citation {
+            font-size: .75em;
+            display: block;
+            width: 100%;
+            padding-right: 1em;
+            margin-top: .75em;
+            font-style: normal;
+            text-align: right;
+        }
+        @include MQ(M) {
+            margin-left: 0em;
+            font-size: 1.4em;
+        }
+        @include MQ(L) {
+            width: 40%;
+            font-size: 1.5em;
+            padding: 2em .5em;
+            margin-top: .5em;
+            margin-bottom: .5em;
+            &:nth-of-type(odd) {
+                float: right;
+                margin-right: -25%;
+                margin-left: .5em;
+                // -webkit-box-shadow: 0px 4px 10px 1px rgba(0,0,0,.2);
+                // box-shadow: 0px 4px 10px 1px rgba(0,0,0,.2);
+                @include MQ(XL) {
+                    margin-right: -30%;
+                }
+            }
+            &:nth-of-type(even) {
+                float: left;
+                margin-right: .5em;
+                margin-left: -25%;
+                border-left: none;
+                border-right: 1px solid $brand;
+                @include MQ(XL) {
+                    margin-left: -30%;
+                }
+            }
+        }
+    }
+}

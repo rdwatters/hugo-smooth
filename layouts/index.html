@@ -1,0 +1,29 @@
+{{ partial "site_header.html" . }}
+<main class="index m-scene" id="main">
+      <div class="m-landing-layout">
+        {{ partial "site_nav.html" . }}
+        <div class="m-header scene_element scene_element--fadein">
+          <h1 class="m-type-display-1">{{.Site.Title}}</h1>
+          <p class="m-type-sub-heading-1 header_intro">To run this demo locally, start a server in the root of this repository. If you have python installed, you can simply run <code>python -m SimpleHTTPServer</code> after you <code>cd</code> into the repo.</p>
+        </div>
+        <div class="m-page scene_element scene_element--fadeinup">
+        	{{ range where .Site.Pages.ByPublishDate "Section" "posts"}}
+        	<div class="m-segment">
+            <div class="segment_content">
+              <h2 class="m-type-heading-1"><a href="{{.Permalink}}">{{.Title}}</a>
+              </h2>
+              <time>{{.PublishDate.Format "January 2, 2006"}}</time>
+              <p class="description">{{.Description}}</span></p>
+            </div>
+          </div>
+        	{{ end }}
+          <div class="m-highlight m-segment">
+            <div class="segment_content">
+              &copy; 2016 Ryan Watters. All rights reserved.
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+{{ partial "site_footer.html" . }}

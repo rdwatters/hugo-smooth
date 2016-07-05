@@ -1,0 +1,79 @@
+# Only one archetype (posts) is included in Hugo Starter
+archetypedir = "archetypes"
+baseurl = ""
+buildDrafts = true
+buildFuture = false
+canonifyurls = true
+config = "config.toml"
+contentdir = "content"
+description = "Content strategist, storyteller, frontend developer, nerd"
+disableLiveReload= false
+disableRSS = false
+disableSitemap = false
+ignoreFiles = []
+languageCode = "en-us"
+layoutDir = "layouts"
+log = false
+metaDataFormat = "yaml"
+publishdir = "public"
+pygmentsUseClasses = true
+relativeURLs = true
+source = ""
+title = "Ryan D Watters"
+uglyURLs = false
+verbose = true
+verboseLog = false
+watch = true
+
+[permalinks]
+  # The temp folder is created for one-off pages (eg, marketing and design-heavy pages that run outside other site templates). Keep in mind that all .md pages under temp still require title and date in the YAML/front matter
+  posts = "/:title/"
+
+[params]
+	SiteAuthor = ""
+  TwitterHandle = "ryandwatters"
+  #######BEGIN SOCIAL#######
+  # For each social account, use the full URL that leads to the homepage of your account/profile
+	GitHub = "https://github.com"
+  Twitter = "https://twitter.com/"
+  Facebook = "https://facebook.com/"
+  YouTube = "https://youtube.com"
+  GooglePlus = "https://plus.google.com/"
+  # For LinkedIn, you'll need to make sure you are using the URL for visitors, rather than the URL once you're signed into your account.
+  LinkedIn = "https://linkedin.com"
+  Instagram = "https://www.instagram.com"
+  Tumblr = "https://www.tumblr.com/"
+  Pinterest = "https://pinterest.com/"
+  # Add your Google Analytics ID here (ie, UA-XXXXXXXX-X). See layouts/partials/google_analytics.html. Dev environment (ie, localhost) is automatically disabled.
+  GoogleAnalyticsTrackingId = ""
+  #######END SOCIAL#######
+  # The Copyright Year is Automatically Generated based on {{ .Site.LastChange }} and is included in layouts/partials/global_foot/site_copyright.html
+  CopyrightLine = "Ryan D Watters, ELS"
+  SiteDescription = "This is a Hugo starter kit developed by Ryan Watters, https://www.github.com/rdwatters"
+  # If true, site style will be embedded in a <style> tag in each html <head> by pulling in "style-embed-for-crp-only.html" partial created by default as part of the Gulp Build. If set to false, the css is not embedded in each page but instead includes an external call to <link rel="stylesheet" href="{{.Site.BaseURL}}/css/style.min.css">
+  UseCRP = false
+  # Include the jQuery CDN in the <head> of your site?
+  IncludeJQ = false
+  # There are two conditions that need to be met in order for Disqus comments to be added to a page. Keeping a site variable allows you to turn off all Disqus comments at once, whereas "comments:" set to "true" or "false" on an individual markdown file allows you more granular control at the article level. The partial (layouts/partials/disqus_comments.html) is written such that localhost will not load comments during development.
+  UseDisqus = true
+  disqusShortname = ""
+  SitePublishDate = "2016-01-01"
+  # Setting this to true will include Swiftype Metadata in <head> and the default single.html <article> in layouts/_default
+  Swiftype = true
+  primary = "indigo"
+  secondary = "amber"
+
+[blackfriday]
+	plainIDAnchors = true
+	hrefTargetBlank = true
+  angledQuotes = false
+  latexDashes = true
+
+[taxonomies]
+  tag = "tags"
+  categories = "categories"
+
+
+
+
+

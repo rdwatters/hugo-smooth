@@ -1,0 +1,30 @@
+//MEDIA QUERIES
+$S:500px;
+$M:768px;
+$L:1024px;
+$XL:1300px;
+$content-max-width: 34em;
+
+//TYPOGRAPHY
+$base-font-size: 20px;
+$base-font-weight: 300;
+$base-font-color: #333333;
+$use-font-face-module: true;
+$include-second-font: true;
+$include-third-font: true;
+$font: 'proximanova';
+$second-font: 'adelle';
+$third-font: 'courierprime';
+
+$base-font-family: $font,'helvetica neue',helvetic,arial,sans-serif;
+$heading-font-family: $second-font;
+$heading-font-weight: 300;
+$title-font-weight: 300;
+
+//COLORS
+$brand: #01589B;
+$body-bg-color: #333333;
+$content-bg-color: #ffffff;
+$post-hero-bg-color: $brand;
+$anchor-color: $brand;
+$anchor-color-hover: $brand;
