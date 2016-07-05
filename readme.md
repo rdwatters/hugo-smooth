@@ -1,1 +1,1 @@
-Potential Hugo Theme Leveraging Smoothstate.js
+### Potential Hugo Theme Leveraging Smoothstate.js
